@@ -1,1 +1,8 @@
-<h1>Hello and welcome to my <em>glorious</em> website.</h1>
+<h1><%= @places.each do |place| %></h1>
+    <div>
+        <h1><%= places.name %></h1><br />
+        <i><%= places.address %></i><br />
+        <p><%= places.description %></p><br />
+    </div>
+
+    <% end %>
