@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .booyah-box{
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -10,8 +10,18 @@
     margin-top: 10px;
     margin-bottom: 15px;
     padding: 20px;
+    font-family: 'Roboto', helvetica;
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', helvetica;
+}
+body{
+    font-family: 'Roboto', helvetica;
+}
+.navbar{
+    background: image_url('double-bubble-dark.png');
+    box-shadow: 0px 1px 3px #2a2a2a;
+    font-family: 'Roboto', helvetica;
 }
