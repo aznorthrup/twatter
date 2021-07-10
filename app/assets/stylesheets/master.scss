@@ -2,14 +2,16 @@
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
-    box-shadow: 1px 1px 2px 0 #d0d0d0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    box-shadow: 1px 1px 2px 0 #2a2a2a;
+    background: image_url('double-bubble-dark.png');
+    border: 1px solid #2b2a2a;
+    border-color: #383636 #3d3b3b #3d3b3b #383636;
     margin-top: 10px;
     margin-bottom: 15px;
     padding: 20px;
     font-family: Helvetica;
+    color: #ff5e5e;
+    text-decoration: none;
 }
 .navbar {
     background: image_url('double-bubble-dark.png');
@@ -17,11 +19,9 @@
     font-family: Helvetica;
 }
 .navbar-brand {
-    color: red;
     font-family: Helvetica;
 }
 .navbar-inverse{
-    color: red;
     font-family: Helvetica;
 }
 body {
@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
-  }
+}
 body {
     background: image_url('double-bubble-outline.png');
 }
@@ -40,10 +40,14 @@ body {
     font-family: Helvetica;
 }
 .navbar-brand {
-    color: red;
     font-family: Helvetica;
 }
 .navbar-inverse {
-    color: red;
     font-family: Helvetica;
+}
+i{
+    color: white;
+}
+p{
+    color:white;
 }

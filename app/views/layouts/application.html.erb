@@ -8,16 +8,20 @@
   </head>
   <body>
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-    <a class="navbar-brand" href="#">Twatter</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#" style="color:#ff5e5e;font-family: Helvetica;">Twatter</a>
+    
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         <li class="nav-item active">
-          <a class="nav-item" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
     </div>
   </nav>
     
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>

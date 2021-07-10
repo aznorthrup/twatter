@@ -1,9 +1,21 @@
 <h1><%= @places.each do |place| %></h1>
-      <div class="booyah-box col-10 offset-1">
-        <h1><%= place.name %></h1>
-        <i><%= place.address %></i><br /><br />
-        <p><%= place.description %></p><br />
-      </div>
-
-      <hr />
-      <% end %>
+  <div class="booyah-box col-10 offset-1">
+    <h1 style="color:#ff5e5e;font-family: Helvetica;"><%= place.name %></h1>
+    <i><%= place.address %></i><br /><br />
+    <p><%= place.description %></p><br />
+  </div>
+  <hr />
+<% end %>
+<div class="container">
+  <div class="row" style="text-align:center;">
+    <div class="booyah-box col-2 offset-1">
+      <%= link_to "First Page", root_path(page: @page = 0)%>
+    </div>
+    <div class="booyah-box col-2 offset-2">
+      <%= link_to "Previous Page", root_path(page: @page - 1)%>
+    </div>
+    <div class="booyah-box col-2 offset-2">
+      <%= link_to "Next Page", root_path(page: @page + 1)%>
+    </div>
+  </div>
+</div>
