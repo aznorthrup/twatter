@@ -21,12 +21,16 @@
           <% end %>
         </li>
       </ul>
+
+      <ul>
+
     </div>
   </nav>
   
-  <%= if notice.present? %>
+  <% if notice.present? %>
     <p class="alert alert-info"><%= notice %></p>
-  <%= if alert.present? %>
+  <% end %>
+  <% if alert.present? %>
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
