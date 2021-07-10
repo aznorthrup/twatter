@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -13,26 +14,13 @@
     color: #ff5e5e;
     text-decoration: none;
 }
-.navbar {
-    background: image_url('double-bubble-dark.png');
-    box-shadow: 0px 1px 3px #2a2a2a;
-    font-family: Helvetica;
-}
-.navbar-brand {
-    font-family: Helvetica;
-}
-.navbar-inverse{
-    font-family: Helvetica;
-}
-body {
-    font-family: Helvetica;
-}
 h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
 }
 body {
     background: image_url('double-bubble-outline.png');
+    font-family: Helvetica;
 }
 .navbar {
     background: image_url('double-bubble-dark.png');
@@ -41,13 +29,18 @@ body {
 }
 .navbar-brand {
     font-family: Helvetica;
+    color: #ff5e5e;
 }
 .navbar-inverse {
     font-family: Helvetica;
+    color: #ff5e5e;
 }
 i{
     color: white;
 }
 p{
     color:white;
+}
+.nav-link {
+    color: #ff5e5e;
 }
