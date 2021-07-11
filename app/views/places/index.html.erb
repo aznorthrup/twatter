@@ -3,6 +3,10 @@
     <h1 style="color:#ff5e5e;font-family: Helvetica;"><%= place.name %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
   </div>
   <hr />
 <% end %>
