@@ -1,19 +1,22 @@
 class PlacesController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
     PLACES_PER_PAGE = 3
     def index
         @page = params.fetch(:page, 0).to_i
         @places = Place.offset(@page * PLACES_PER_PAGE).limit(PLACES_PER_PAGE)
     end
 
-    before_action :authenticate_user!, only: [:new, :create]
-
     def new
         @place = Place.new
     end
 
     def create
-        current_user.places.create(place_params)
-        redirect_to root_path
+        @place = current_user.places.create(place_params)
+        if @place.valid?
+            redirect_to root_path
+        else
+            render :new, status: :unproccessable_entity
+        end
     end
 
     def show
@@ -22,16 +25,34 @@ class PlacesController < ApplicationController
 
     def edit
         @place = Place.find(params[:id])
+        
+        if @place.user != current_user
+            return render plain: 'Not Allowed', status: :forbidden
+        end
     end
 
     def update
         @place = Place.find(params[:id])
+
+        if @place.user != current_user
+            return render plain: 'Not Allowed', status: :forbidden
+        end
+
         @place.update_attributes(place_params)
-        redirect_to root_path
+        if @place.valid?
+            redirect_to root_path
+        else
+            render :edit, status: :unproccessable_entity
+        end
     end
 
     def destroy
         @place = Place.find(paramd[:id])
+
+        if @place.user != current_user
+            return render plain: 'Not Allowed', status: :forbidden
+        end
+
         @place.destroy
         redirect_to root_path
     end
