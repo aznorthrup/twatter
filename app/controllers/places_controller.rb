@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-    PLACES_PER_PAGE = 3
+    PLACES_PER_PAGE = 10
     def index
         @page = params.fetch(:page, 0).to_i
         @places = Place.offset(@page * PLACES_PER_PAGE).limit(PLACES_PER_PAGE)
